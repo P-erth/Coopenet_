@@ -37,20 +37,32 @@ namespace Coopenet_
             String socioDesde = text2.Substring(pivote += 7, 8);
             String socioActa = text2.Substring(pivote += 8, 8);
             String socioTipo = text2.Substring(pivote += 8, 8);
-            /*String socioDoc = text2.Substring(pivote +=, 7);
-            String inf1 = text2.Substring(pivote +=, 7);
-            String inf2 = text2.Substring(pivote +=, 7);
-            String inf3 = text2.Substring(pivote +=, 7);
-            String inf4 = text2.Substring(pivote +=, 7);
-            String inf5 = text2.Substring(pivote +=, 7);
-            String inf6 = text2.Substring(pivote +=, 7);
-            String cuit = text2.Substring(pivote +=, 7);
-            String condiva = text2.Substring(pivote +=, 7);
-            String cbu = text2.Substring(pivote +=, 7);
-            String cuFecha = text2.Substring(pivote +=, 7);
-            String cuHora = text2.Substring(pivote +=, 7);
-            String vto = text2.Substring(pivote +=, 7);
-            */
+            String socioDoc = text2.Substring(pivote += 8, 11);
+            String inf1 = text2.Substring(pivote += 11, 52);
+            String inf2 = text2.Substring(pivote += 52, 52);
+            String inf3 = text2.Substring(pivote += 52, 52);
+            String inf4 = text2.Substring(pivote += 52, 52);
+            String inf5 = text2.Substring(pivote += 52, 52);
+            String inf6 = text2.Substring(pivote += 52, 52);
+            String cuit = text2.Substring(pivote += 52, 11);
+            String condiva = text2.Substring(pivote += 11, 20);
+            String cbu = text2.Substring(pivote += 20, 22);
+            String cuFecha = text2.Substring(pivote += 22, 2) + "/" + text2.Substring(pivote += 2, 2) + "/" + text2.Substring(pivote += 2, 4) ;
+            String cuHora = text2.Substring(pivote += 4, 2) + ":" + text2.Substring(pivote += 2,2);
+            String vto = text2.Substring(pivote += 2, 2) + "/" + text2.Substring(pivote += 2, 2) + "/" + text2.Substring(pivote += 2, 4);
+
+
+            String proximoMes = text2.Substring(pivote += 4, 2);
+            if (proximoMes == "12")
+            {
+                proximoMes = "01";
+                String proxAño = text2.Substring(pivote += 2, 4);
+            }
+            else
+            {
+                proximoMes = proximoMes;
+            }
+            
             // Draw image
             gfx.DrawImage(img, 0, 0);
             // Draw the text
