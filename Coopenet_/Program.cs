@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
 
 namespace Coopenet_
 {
